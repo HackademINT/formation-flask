@@ -1,0 +1,3 @@
+{% for item in current_menu.children %}
+<a href="{{ item.url }}">{% if item.active %}*{% endif %}{{ item.text }}</a>
+{% endfor %}
