@@ -1,4 +1,4 @@
-from flask import Flask
+from flask import Flask, abort
 app = Flask(__name__)
 
 @app.route("/")
@@ -16,6 +16,12 @@ def show_post(post_id):
 @app.route('/path/<path:subpath>')
 def show_subpath(subpath):
     return 'Subpath %s' % subpath
+
+# Error
+@app.errorhandler(404)
+def erreur404(error):
+    return "Il n'y a rien ici",404
+
 
 if __name__ == "__main__":
     app.run()
