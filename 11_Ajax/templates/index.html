@@ -1,0 +1,41 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+    $(".ajax1").click(function(){
+        $.ajax({type : "GET", url: "https://www.google.fr", 
+          success: function(result){
+            $("#div1").html(result);
+        },
+          error : function(result){
+            $("#div1").html("<p>Impossible de charger la page</p>")}
+        });
+    });
+    $(".ajax2").click(function(){
+      $.ajax({type : "GET", url: "{{ url_for('ajax') }}", 
+          success: function(result){
+            $("#div2").html(result);
+        },
+          error : function(result){
+            $("#div2").html("<p>Impossible de charger la page</p>")}
+        });
+    });
+});
+</script>
+</head>
+<body>
+
+<button class="ajax1">Clique sur moi !</button>
+<div id="div1"></div>
+
+</br>
+
+<button class="ajax2">Clique sur moi !</button>
+<div id="div2"></div>
+
+</body>
+</html>
+
