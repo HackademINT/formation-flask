@@ -1,0 +1,4 @@
+flask
+flask_menu
+flask_sqlalchemy
+flask_admin
