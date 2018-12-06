@@ -8,10 +8,11 @@ $(document).ready(function(){
     $(".ajax1").click(function(){
         $.ajax({type : "GET", url: "https://www.google.fr", 
           success: function(result){
+            console.log(result);
             $("#div1").html(result);
         },
           error : function(result){
-            $("#div1").html("<p>Impossible de charger la page</p>")}
+            $("#div1").html("<p>Impossible de charger la page</br>Cross-Origin Request Blocked: The Same Origin Policy disallows reading the remote resource at https://www.google.fr/. (Reason: CORS header ‘Access-Control-Allow-Origin’ missing).</p>")}
         });
     });
     $(".ajax2").click(function(){
@@ -23,19 +24,47 @@ $(document).ready(function(){
             $("#div2").html("<p>Impossible de charger la page</p>")}
         });
     });
+    $(".ajax3").click(function(){
+      id = document.getElementById('id_ajax3').value;
+      if (!id) { id='1'}
+      url = "https://jsonplaceholder.typicode.com/todos/"+id
+      $.ajax({
+          type : "GET", url: url, 
+          dataType: "jsonp",
+          success: function(result){
+            $("#div3").html("</br>Téléchargement du JSON à l'adresse:</br>"+url+'</br>result: '+JSON.stringify(result)+' </br>result.title: '+result.title);
+        },
+          error : function(result){
+            $("#div3").html("<p>Impossible de charger la page</p>")}
+        });
+    });
 });
 </script>
 </head>
 <body>
 
+<label for="ajax1">Requête vers google.fr</label></br>
 <button class="ajax1">Clique sur moi !</button>
 <div id="div1"></div>
 
 </br>
 
+<label for="ajax2">Requête locale</label></br>
 <button class="ajax2">Clique sur moi !</button>
 <div id="div2"></div>
 
+</br>
+
+<label for="ajax3">Requête vers une API random</label></br>
+<label for="id_ajax3">Choisis un chiffre</label></br>
+<input id="id_ajax3" />
+<button class="ajax3">Clique sur moi !</button>
+<div id="div3"></div>
+
 </body>
 </html>
-
+<style>
+label {
+  font-weight: bold !important;
+}
+</style>
