@@ -3,6 +3,7 @@ from flask import render_template
 from flask import render_template_string
 app = Flask(__name__)
 
+LISTE = [ 'toto', 'tata', 'tutu' ]
 
 @app.route("/")
 def index():
@@ -18,7 +19,7 @@ def premierTemplate():
 @app.route("/theme2")
 def deuxiemeTemplate():
     return render_template('w3schools.com.html',
-            message="Formation Flask :D")
+            message="Formation Flask :D", liste=LISTE)
 
 if __name__ == "__main__":
     app.run()
