@@ -19,10 +19,16 @@ Tout ceci est rendu possible grâce au packet virtualenv. Vous retrouverez les i
 cd 00_Install; bash install.sh
 ```
 
+Placer dans le dossier où vous souhaitez mettre votre environnement virtuel. Pour le créer, il suffit de faire :
+
+```bash
+python3 -m venv <NOM DE L'ENVIRONNEMENT>
+```
+
 Pour activer votre environnement virtuel, tapez la commande suivante :
 
 ```bash
-source venv/bin/activate
+source <NOM DE L'ENVIRONNEMENT>/bin/activate
 ```
 
 Pour le désactiver :
