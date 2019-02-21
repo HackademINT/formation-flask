@@ -1,4 +1,4 @@
-# Formation-flask
+#Formation-flask
 
 ## La nécéssité d'un environnement virtuel
 
@@ -28,3 +28,13 @@ Pour le désactiver :
 ```bash
 deactivate
 ```
+
+## CLI
+
+Depuis peu, Flask intègre la possibilité de créer une CLI pour l'application. Voici le lien de la doc :
+
+```
+http://flask.pocoo.org/docs/1.0/cli/
+```
+
+Les plus aventureux pourront créer une belle CLI avec la lib 'click' ;-)
