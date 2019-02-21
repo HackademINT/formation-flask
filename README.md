@@ -12,13 +12,6 @@ Un autre avantage : l'environnement est un simple dossier que nous pouvons dépl
 
 ## Virtualenv
 
-
-Tout ceci est rendu possible grâce au packet virtualenv. Vous retrouverez les instructions d'installations dans le dossier 00_Install. 
-
-```bash
-cd 00_Install; bash install.sh
-```
-
 Placer dans le dossier où vous souhaitez mettre votre environnement virtuel. Pour le créer, il suffit de faire :
 
 ```bash
