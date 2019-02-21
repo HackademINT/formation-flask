@@ -18,3 +18,14 @@ Tout ceci est rendu possible grâce au packet virtualenv. Vous retrouverez les i
 ```bash
 cd 00_Install; bash install.sh
 ```
+
+Pour activer votre environnement virtuel, tapez la commande suivante :
+
+```bash
+source venv/bin/activate
+```
+
+Pour le désactiver :
+```bash
+deactivate
+```
