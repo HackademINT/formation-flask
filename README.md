@@ -1,5 +1,12 @@
 #Formation-flask
 
+## Etape 0 : RTFM
+
+Voici votre nouvelle bible :
+```
+http://flask.pocoo.org/docs/1.0/
+```
+
 ## La nécéssité d'un environnement virtuel
 
  Python est un langage qui possède de nombreuses librairies. Il peut arriver que vous travailliez sur plusieurs projets à la fois nécessitant chacun des librairies de version différente. Parfois, il y a aussi le soucis de "reproductibilité". Imaginez le scénario suivant : vous travaillez sur un projet sur votre ordinateur et vous souhaitez après le déployer sur un serveur. Si vous n'avez pas noté les librairies à installer quelque part, vous aller perdre du temps. De plus, si jamais une librairie a changé de version et que vous avez besoin d'une version précise, vous allez devoir désinstallé la librairie existante puis mettre l'ancienne version etc. Ce n'est pas du tout viable pour du long terme.
